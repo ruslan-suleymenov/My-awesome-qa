@@ -61,7 +61,6 @@ def test_search_input(browser):
     input_search.send_keys(Keys.RETURN)
 
 
-
 #def test_elements_by_css_selector(browser):
 #     navbar_items = browser.find_elements(MainPage.nav_links)
 #     for item in navbar_items:
