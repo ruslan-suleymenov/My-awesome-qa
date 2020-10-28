@@ -10,6 +10,7 @@ class MainPage:
     phones = "Phones & PDAs"
     cameras = "Cameras"
     mp3 = "MP3 Players"
-
+    search_input = "search"
+    search_btn = "btn btn-default btn-lg"
 
 

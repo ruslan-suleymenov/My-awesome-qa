@@ -21,43 +21,48 @@ from selenium.webdriver.common.action_chains import ActionChains
 #     browser.find_element_by_xpath("//div[contains(@class, 'alert-success')]")
 
 
-def test_element_by_id(browser):
-    browser.find_element(By.ID, "slideshow0").click()
-    browser.find_element(By.CLASS_NAME, "breadcrumb")
-    browser.find_element(By.ID, ProductPage.button_cart).click()
-    sleep(2)
-    browser.find_element(By.ID, ProductPage.cart).click()
-    sleep(2)
-    browser.find_element(By.LINK_TEXT, "View Cart").click()
+# def test_element_by_id(browser):
+#     browser.find_element(By.ID, "slideshow0").click()
+#     browser.find_element(By.CLASS_NAME, "breadcrumb")
+#     browser.find_element(By.ID, ProductPage.button_cart).click()
+#     sleep(2)
+#     browser.find_element(By.ID, ProductPage.cart).click()
+#     sleep(2)
+#     browser.find_element(By.LINK_TEXT, "View Cart").click()
+#
+#
+# def test_element_by_link_text(browser):
+#     desktops_link = browser.find_element_by_link_text(MainPage.desktop)
+#     ActionChains(browser).move_to_element(desktops_link).pause(2).perform()
+#     browser.find_element_by_link_text("Show All Desktops").click()
+#     browser.find_element_by_partial_link_text("Product Compare")
+#
+#     components_link = browser.find_element_by_link_text(MainPage.components)
+#     ActionChains(browser).move_to_element(components_link).pause(2).perform()
+#     browser.find_element_by_link_text("Monitors (2)").click()
+#
+#     laptops_link = browser.find_element_by_link_text(MainPage.laptops)
+#     ActionChains(browser).move_to_element(laptops_link).pause(2).perform()
+#
+#     tablets_link = browser.find_element_by_link_text(MainPage.tablets).click()
+#
+#     software_link = browser.find_element_by_link_text(MainPage.software).click()
+#
+#     phones_link = browser.find_element_by_link_text(MainPage.phones).click()
+#
+#     cameras_link = browser.find_element_by_link_text(MainPage.cameras).click()
+#
+#     mp3_link = browser.find_element_by_link_text(MainPage.mp3).click()
 
 
-def test_element_by_link_text(browser):
-    desktops_link = browser.find_element_by_link_text(MainPage.desktop)
-    ActionChains(browser).move_to_element(desktops_link).pause(2).perform()
-    browser.find_element_by_link_text("Show All Desktops").click()
-    browser.find_element_by_partial_link_text("Product Compare")
-
-    components_link = browser.find_element_by_link_text(MainPage.components)
-    ActionChains(browser).move_to_element(components_link).pause(2).perform()
-    browser.find_element_by_link_text("Monitors (2)").click()
-
-    laptops_link = browser.find_element_by_link_text(MainPage.laptops)
-    ActionChains(browser).move_to_element(laptops_link).pause(2).perform()
-
-    tablets_link = browser.find_element_by_link_text(MainPage.tablets).click()
-
-    software_link = browser.find_element_by_link_text(MainPage.software).click()
-
-    phones_link = browser.find_element_by_link_text(MainPage.phones).click()
-
-    cameras_link = browser.find_element_by_link_text(MainPage.cameras).click()
-
-    mp3_link = browser.find_element_by_link_text(MainPage.mp3).click()
+def test_search_input(browser):
+    input_search = browser.find_element_by_name(MainPage.search_input)
+    input_search.send_keys("iMac")
+    input_search.send_keys(Keys.RETURN)
 
 
 
-
-# def test_elements_by_css_selector(browser):
+#def test_elements_by_css_selector(browser):
 #     navbar_items = browser.find_elements(MainPage.nav_links)
 #     for item in navbar_items:
 #         ActionChains(browser).move_to_element(item).pause(0.5).perform()
