@@ -12,5 +12,10 @@ class MainPage:
     mp3 = "MP3 Players"
     search_input = "search"
     search_btn = "btn btn-default btn-lg"
+    about_us = "About Us"
+    del_info = "Delivery Information"
+    privacy_pol = "Privacy Policy"
+    terms = "Terms & Conditions"
+
 
 
