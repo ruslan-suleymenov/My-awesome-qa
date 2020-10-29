@@ -59,17 +59,27 @@ from selenium.webdriver.common.action_chains import ActionChains
 #     mp3_link = browser.find_element_by_link_text(MainPage.mp3).click()
 
 
-def test_search_input(browser):
+# def test_search_input(browser):
+#     input_search = browser.find_element_by_name(MainPage.search_input)
+#     input_search.send_keys("iMac")
+#     input_search.send_keys(Keys.RETURN)
+#
+#
+# def test_footer(browser):
+#     about_link = browser.find_element_by_link_text(MainPage.about_us).click()
+#     del_link = browser.find_element_by_link_text(MainPage.del_info).click()
+#     privacy_link = browser.find_element_by_link_text(MainPage.privacy_pol).click()
+#     terms_link = browser.find_element_by_link_text(MainPage.terms).click()
+
+
+def test_product_page(browser):
     input_search = browser.find_element_by_name(MainPage.search_input)
-    input_search.send_keys("iMac")
+    input_search.send_keys("iPhone")  # find Iphone in our shop
     input_search.send_keys(Keys.RETURN)
+    iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
+    browser.find_element_by_xpath(ProductPage.pic_iphone).click()
+    sleep(3)
 
-
-def test_footer(browser):
-    about_link = browser.find_element_by_link_text(MainPage.about_us).click()
-    del_link = browser.find_element_by_link_text(MainPage.del_info).click()
-    privacy_link = browser.find_element_by_link_text(MainPage.privacy_pol).click()
-    terms_link = browser.find_element_by_link_text(MainPage.terms).click()
 
 # def test_elements_by_css_selector(browser):
 #     navbar_items = browser.find_elements(MainPage.nav_links)

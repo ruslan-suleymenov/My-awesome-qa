@@ -6,3 +6,4 @@ class ProductPage:
 
     button_cart = "button-cart"
     cart = "cart"
+    pic_iphone = "//*[@id='content']/div[1]/div[1]/ul[1]/li[1]"
