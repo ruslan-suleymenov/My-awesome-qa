@@ -9,76 +9,76 @@ from locators import MainPage, ProductPage, AdminPage
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-# def test_element_by_class_name_selector(parametrize_browser):
-#     bro = parametrize_browser
-#     bro.find_element_by_class_name(MainPage.promoblock).click()
-#     bro.find_element_by_class_name("breadcrumb")
-#     bro.find_element_by_class_name("input-group-btn")
-#     bro.find_element_by_class_name("input-group")
-#
-#
-# def test_element_by_xpath(browser):
-#     browser.find_element_by_xpath("//div[@class='swiper-viewport']").click()
-#     browser.find_element_by_xpath("//*[@class='breadcrumb']")
-#     browser.find_element_by_xpath("//button[@data-original-title='Add to Wish List']").click()
-#     browser.find_element_by_xpath("//div[contains(@class, 'alert-success')]")
-#
-#
-# def test_element_by_id(browser):
-#     browser.find_element(By.ID, "slideshow0").click()
-#     browser.find_element(By.CLASS_NAME, "breadcrumb")
-#     browser.find_element(By.ID, ProductPage.button_cart).click()
-#     sleep(2)
-#     browser.find_element(By.ID, ProductPage.cart).click()
-#     sleep(2)
-#     browser.find_element(By.LINK_TEXT, "View Cart").click()
-#     sleep(2)
-#
-#
-# def test_element_by_link_text(browser):
-#     desktops_link = browser.find_element_by_link_text(MainPage.desktop)
-#     ActionChains(browser).move_to_element(desktops_link).pause(2).perform()
-#     browser.find_element_by_link_text("Show All Desktops").click()
-#     browser.find_element_by_partial_link_text("Product Compare")
-#
-#     components_link = browser.find_element_by_link_text(MainPage.components)
-#     ActionChains(browser).move_to_element(components_link).pause(2).perform()
-#     browser.find_element_by_link_text("Monitors (2)").click()
-#
-#     laptops_link = browser.find_element_by_link_text(MainPage.laptops)
-#     ActionChains(browser).move_to_element(laptops_link).pause(2).perform()
-#
-#     tablets_link = browser.find_element_by_link_text(MainPage.tablets).click()
-#
-#     software_link = browser.find_element_by_link_text(MainPage.software).click()
-#
-#     phones_link = browser.find_element_by_link_text(MainPage.phones).click()
-#
-#     cameras_link = browser.find_element_by_link_text(MainPage.cameras).click()
-#
-#     mp3_link = browser.find_element_by_link_text(MainPage.mp3).click()
+def test_element_by_class_name_selector(parametrize_browser):
+    bro = parametrize_browser
+    bro.find_element_by_class_name(MainPage.promoblock).click()
+    bro.find_element_by_class_name("breadcrumb")
+    bro.find_element_by_class_name("input-group-btn")
+    bro.find_element_by_class_name("input-group")
 
 
-# def test_search_input(browser):
-#     input_search = browser.find_element_by_name(MainPage.search_input)
-#     input_search.send_keys("iMac")
-#     input_search.send_keys(Keys.RETURN)
-#
-#
-# def test_footer(browser):
-#     about_link = browser.find_element_by_link_text(MainPage.about_us).click()
-#     del_link = browser.find_element_by_link_text(MainPage.del_info).click()
-#     privacy_link = browser.find_element_by_link_text(MainPage.privacy_pol).click()
-#     terms_link = browser.find_element_by_link_text(MainPage.terms).click()
+def test_element_by_xpath(browser):
+    browser.find_element_by_xpath("//div[@class='swiper-viewport']").click()
+    browser.find_element_by_xpath("//*[@class='breadcrumb']")
+    browser.find_element_by_xpath("//button[@data-original-title='Add to Wish List']").click()
+    browser.find_element_by_xpath("//div[contains(@class, 'alert-success')]")
 
 
-# def test_product_page(browser):
-#     input_search = browser.find_element_by_name(MainPage.search_input)
-#     input_search.send_keys("iPhone")  # find Iphone in our shop
-#     input_search.send_keys(Keys.RETURN)
-#     iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
-#     browser.find_element_by_xpath(ProductPage.pic_iphone).click()
-#     sleep(3)
+def test_element_by_id(browser):
+    browser.find_element(By.ID, "slideshow0").click()
+    browser.find_element(By.CLASS_NAME, "breadcrumb")
+    browser.find_element(By.ID, ProductPage.button_cart).click()
+    sleep(2)
+    browser.find_element(By.ID, ProductPage.cart).click()
+    sleep(2)
+    browser.find_element(By.LINK_TEXT, "View Cart").click()
+    sleep(2)
+
+
+def test_element_by_link_text(browser):
+    desktops_link = browser.find_element_by_link_text(MainPage.desktop)
+    ActionChains(browser).move_to_element(desktops_link).pause(2).perform()
+    browser.find_element_by_link_text("Show All Desktops").click()
+    browser.find_element_by_partial_link_text("Product Compare")
+
+    components_link = browser.find_element_by_link_text(MainPage.components)
+    ActionChains(browser).move_to_element(components_link).pause(2).perform()
+    browser.find_element_by_link_text("Monitors (2)").click()
+
+    laptops_link = browser.find_element_by_link_text(MainPage.laptops)
+    ActionChains(browser).move_to_element(laptops_link).pause(2).perform()
+
+    tablets_link = browser.find_element_by_link_text(MainPage.tablets).click()
+
+    software_link = browser.find_element_by_link_text(MainPage.software).click()
+
+    phones_link = browser.find_element_by_link_text(MainPage.phones).click()
+
+    cameras_link = browser.find_element_by_link_text(MainPage.cameras).click()
+
+    mp3_link = browser.find_element_by_link_text(MainPage.mp3).click()
+
+
+def test_search_input(browser):
+    input_search = browser.find_element_by_name(MainPage.search_input)
+    input_search.send_keys("iMac")
+    input_search.send_keys(Keys.RETURN)
+
+
+def test_footer(browser):
+    about_link = browser.find_element_by_link_text(MainPage.about_us).click()
+    del_link = browser.find_element_by_link_text(MainPage.del_info).click()
+    privacy_link = browser.find_element_by_link_text(MainPage.privacy_pol).click()
+    terms_link = browser.find_element_by_link_text(MainPage.terms).click()
+
+
+def test_product_page(browser):
+    input_search = browser.find_element_by_name(MainPage.search_input)
+    input_search.send_keys("iPhone")  # find Iphone in our shop
+    input_search.send_keys(Keys.RETURN)
+    iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
+    browser.find_element_by_xpath(ProductPage.pic_iphone).click()
+    sleep(3)
 
 
 def test_admin_login_page(browser):
