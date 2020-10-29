@@ -5,7 +5,7 @@ from selenium import webdriver
 from time import time, sleep
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import MainPage, ProductPage
+from locators import MainPage, ProductPage, AdminPage
 from selenium.webdriver.common.action_chains import ActionChains
 
 
@@ -72,14 +72,23 @@ from selenium.webdriver.common.action_chains import ActionChains
 #     terms_link = browser.find_element_by_link_text(MainPage.terms).click()
 
 
-def test_product_page(browser):
-    input_search = browser.find_element_by_name(MainPage.search_input)
-    input_search.send_keys("iPhone")  # find Iphone in our shop
-    input_search.send_keys(Keys.RETURN)
-    iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
-    browser.find_element_by_xpath(ProductPage.pic_iphone).click()
-    sleep(3)
+# def test_product_page(browser):
+#     input_search = browser.find_element_by_name(MainPage.search_input)
+#     input_search.send_keys("iPhone")  # find Iphone in our shop
+#     input_search.send_keys(Keys.RETURN)
+#     iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
+#     browser.find_element_by_xpath(ProductPage.pic_iphone).click()
+#     sleep(3)
 
+
+def test_admin_login_page(browser):
+    input_login = browser.find_element_by_id(AdminPage.input_login).clear()
+    input_login.clear()
+    input_login.send_keys("admin")
+    input_pass = browser.find_element_by_id(AdminPage.input_pass)
+    input_pass.clear
+    input_pass.send_keys("1234")
+    input_pass.send_keys(Keys.RETURN)
 
 # def test_elements_by_css_selector(browser):
 #     navbar_items = browser.find_elements(MainPage.nav_links)
