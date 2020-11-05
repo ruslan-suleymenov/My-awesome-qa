@@ -1,5 +1,6 @@
 import pytest
 import sys
+import gettext
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -24,3 +25,4 @@ def test_wait():
     wd.find_element_by_css_selector('#demo1 > div.paginationjs > div > ul > li:nth-child(3)').click()
     wait = WebDriverWait(wd, 10).until(EC.invisibility_of_element(el))
     wd.quit()
+
