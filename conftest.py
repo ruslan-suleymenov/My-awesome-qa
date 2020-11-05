@@ -12,6 +12,7 @@ def browser(request):
     browser_param = request.config.getoption("--browser")
     if browser_param == "chrome":
         driver = webdriver.Chrome(executable_path="/Users/Nigma/Applications/chromedriver")
+        driver.maximize_window()
     elif browser_param == "safari":
         driver = webdriver.Safari()
     else:

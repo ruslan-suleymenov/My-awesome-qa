@@ -31,10 +31,13 @@ def test_element_by_id(browser):
     browser.find_element(By.CLASS_NAME, "breadcrumb")
     el = wait.until(EC.element_to_be_clickable((By.ID, ProductPage.button_cart)))
     el.click()
+    browser.get_screenshot_as_file("screenshot-1.png")
     el = wait.until(EC.element_to_be_clickable((By.ID, ProductPage.cart)))
     el.click()
+    browser.get_screenshot_as_file("screenshot-2.png")
     el = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "View Cart")))
     el.click()
+    browser.get_screenshot_as_file("screenshot-3.png")
 
 
 def test_element_by_link_text(browser):
@@ -80,7 +83,6 @@ def test_product_page(browser):
     input_search.send_keys(Keys.RETURN)
     iphone_link = browser.find_element_by_link_text("iPhone").click()  # click iPhone
     browser.find_element_by_xpath(ProductPage.pic_iphone).click()
-    sleep(3)
 
 
 def test_admin_login_page(browser):
