@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import MainPage, ProductPage, AdminPage
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 def test_element_by_class_name_selector(parametrize_browser):
@@ -86,7 +87,7 @@ def test_admin_login_page(browser):
     input_login.clear()
     input_login.send_keys("admin")
     input_pass = browser.find_element_by_id(AdminPage.input_pass)
-    input_pass.clear
+    input_pass.clear()
     input_pass.send_keys("1234")
     input_pass.send_keys(Keys.RETURN)
 

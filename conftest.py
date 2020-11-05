@@ -31,8 +31,6 @@ def parametrize_browser(request):
     browser_param = request.param
     if browser_param == "chrome":
         driver = webdriver.Chrome()
-    #elif browser_param == "firefox":
-     #   driver = webdriver.Firefox()
     elif browser_param == "safari":
         driver = webdriver.Safari()
     else:
