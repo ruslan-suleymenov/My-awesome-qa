@@ -26,14 +26,15 @@ def test_element_by_xpath(browser):
 
 
 def test_element_by_id(browser):
+    wait = WebDriverWait(browser, 10)
     browser.find_element(By.ID, "slideshow0").click()
     browser.find_element(By.CLASS_NAME, "breadcrumb")
-    browser.find_element(By.ID, ProductPage.button_cart).click()
-    sleep(2)
-    browser.find_element(By.ID, ProductPage.cart).click()
-    sleep(2)
-    browser.find_element(By.LINK_TEXT, "View Cart").click()
-    sleep(2)
+    el = wait.until(EC.element_to_be_clickable((By.ID, ProductPage.button_cart)))
+    el.click()
+    el = wait.until(EC.element_to_be_clickable((By.ID, ProductPage.cart)))
+    el.click()
+    el = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "View Cart")))
+    el.click()
 
 
 def test_element_by_link_text(browser):
@@ -83,7 +84,8 @@ def test_product_page(browser):
 
 
 def test_admin_login_page(browser):
-    input_login = browser.find_element_by_id(AdminPage.input_login).clear()
+    browser.get("https://demo.opencart.com/admin/")
+    input_login = browser.find_element_by_id(AdminPage.input_login)
     input_login.clear()
     input_login.send_keys("admin")
     input_pass = browser.find_element_by_id(AdminPage.input_pass)
